@@ -38,10 +38,17 @@ void main() {
 
 // // Q.4: Create a list of numbers & write a program to get the smallest & greatest number from a list.
 
-  List numbers = [2, 6, 29, 50, 65, 70, 100];
-  numbers.sort();
-  print("smallestnum : ${numbers.first}");
-  print("largestnum : ${numbers.last}");
+  List numbers = [
+    2,
+    6,
+    29,
+    50,
+  ];
+  numbers.shuffle();
+  print("Shuffle numbers $numbers");
+  print(numbers.reduce((a, b) => a < b ? a : b));
+
+  print(numbers.reduce((a, b) => a > b ? a : b));
 
 // // Q.5: Given a list of integers, write a dart code that returns the maximum value from the list.
 
